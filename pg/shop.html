@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <title>Bootstrap</title>
+  <!-- codificação da página-->
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, inital-scale=1, shrink-to-fit=no">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css"> 
+  
+</head>
+<body>
+
+  <!-- nav bar -->
+<div class="pos-f-t">
+  <div class="collapse" id="batatas">
+    <div class="bg-dark p-4">
+
+      <!--texto animado-->
+      <style type="text/css">
+    .ml1 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml1 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ml1 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml1 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  transform-origin: 0 0;
+}
+
+.ml1 .line1 { top: 0; }
+.ml1 .line2 { bottom: 0; }
+</style>
+</head>
+
+<body>
+  <!-- html -->
+
+<h1 class="ml1">
+  <span class="text-wrapper">
+    <span class="line line1"></span>
+    <span class="letters">Ariana grande</span>
+    <span class="line line2"></span>
+  </span>
+</h1>
+
+<script src="../Bootstrap/js/anime.min.js"></script>
+<script type="text/javaScript">
+  // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml1 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml1 .letter',
+    scale: [0.3,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 600,
+    delay: (el, i) => 70 * (i+1)
+    }).add({
+    targets: '.ml1 .line',
+    scaleX: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 700,
+    offset: '-=875',
+
+    delay: (el, i, l) => 80 * (l - i)
+  }).add({
+    targets: '.ml1',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+
+
+      <!--<span class="text-muted">Menu dinâmico</span>-->
+      <a href="../index.html" title="Inicio" class="btn btn-info"> Início </a>   
+      <a href="Sobreaartista.html" title="Sobre a Arista" class="btn btn-info"> Sobre a Artista </a>
+      <a href="preços.html" title="Preços dos Bilhetes" class="btn btn-info"> Preço dos Bilhetes </a>
+       <a href="#" title="Lojas" class="btn btn-info"> Lojas </a>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#batatas" aria-controls="batatas" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+
+
+<!-- "introdução da página" --> 
+<p align="center">
+<h4  align="center">
+  Hora das compras
+</h4>
+</p>
+    
+<!-- https://getbootstrap.com/docs/4.3/components/alerts/ -->
+<!-- examples -->
+<div align="center">
+<div class="alert alert-light" role="alert">
+</div>
+
+    <div class="row">
+        <div class="col">
+          <!--1 of 3 linha baixo lado esquerdo -->
+          <!-- https://getbootstrap.com/docs/4.3/components/card/ -->
+          <!-- Border -->
+        <div class="card border-secondary mb-3" style="max-width: 18rem;">
+          <!-- link para página da loja da artista -->
+              <div class="card-header"> <a href="https://shop.arianagrande.com/collections/music?utm_campaign=navigation&utm_source=arianagrande.com&utm_medium=referral" title="Loja"> Ariana Store </a></div>
+          <div class="card-body text-secondary">
+         
+            <p class="card-text">Aqui pode comprar os albuns da artista tanto como roupas e acessorios a sua escolha.
+</p>
+</div>
+</div>
+</div>
+</div>
+    
+<!-- https://getbootstrap.com/docs/4.3/components/alerts/ -->
+<!-- examples -->
+
+
+    <div class="row">
+        <div class="col">
+          <!--1 of 3 linha baixo lado esquerdo -->
+          <!-- https://getbootstrap.com/docs/4.3/components/card/ -->
+          <!-- Border -->
+        <div class="card border-secondary mb-3" style="max-width: 18rem;">
+          <!-- link para página da loja da artista -->
+              <div class="card-header"> <a href="https://arianagrandefragrances.com/" title="Loja"> Ariana Fragrances Store </a></div>
+          <div class="card-body text-secondary">
+         
+            <p class="card-text">Aqui pode comprar alguns perfumes da artista.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<!--musica-->
+
+<audio src="../musica/Tun.mp3" autobuffer autoloop loop controls> </audio>
+
+<!-- footer-->
+<footer class="card-footer text-muted" style="background-color: #343a40 ; text-align: center;">
+        
+  <h6> &#169; Copy - Nº 21571 - Manuel Fernandes &#169; </h6>
+
+</footer>
+
+
+<script src="jquery-3.4.1.min.js"></script>
+<script src="../bootstrap/js/popper.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
